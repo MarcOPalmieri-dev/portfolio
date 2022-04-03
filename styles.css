@@ -1,0 +1,248 @@
+
+:root{
+    --main-color-blue:#1B263B;
+    --main-color-lh-blue:#24DAFF;
+    --main-color-white:white;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height:100vh;
+}
+
+nav{
+    position: relative;
+    padding: 0 2.4em;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    height: 50px;
+    width: 50px;
+}
+
+    
+
+ul{
+    width: 40%;
+    min-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a{
+    background-image: linear-gradient(var(--main-color-lh-blue), var(--main-color-lh-blue));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    font-size:1.6rem;
+    color: var(--main-color-blue);
+}
+
+ul li a:hover{
+    background-size: 100% 2px;
+}
+
+.button{
+    padding: 0.6em 1.4em;
+    border-radius: 30px;
+    border: 2px solid var(--main-color-blue);
+    cursor: pointer;
+    transition: all .3s ease-in;
+}
+
+.button:hover, .button:focus{
+    background: var(--main-color-blue);
+    color: var(--main-color-white);
+}
+
+
+.menu-button{
+    display: none;
+}
+
+.background-container{
+    width: 100%;
+    height: calc(100% - 64px);
+    display: flex;
+}
+
+.background-left{
+    width: 50%;
+    background: var(--main-color-blue);
+}
+
+.background-right{
+    width: 50%;
+    background: var(--main-color-lh-blue);
+}
+
+.hero{
+    position: absolute;
+    top: 61px;
+    width: 100%;
+    height: calc(100% - 64px);
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 65% 15% 10%;
+    justify-items: center;
+    align-items: center;
+}
+
+.hero-image{
+    /* margin-left: 13px; */
+    padding: 23px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/circle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title-container{
+    display: flex;
+    width: 85%;
+}
+
+.title-container > img{
+   margin-right:6px;
+   height: 99px;
+}
+
+/* Marco title */
+.title-container:first-child{
+    justify-content: flex-end;
+}
+
+.title{
+    font-size:clamp(6rem,3vw,9rem);
+    font-weight:800;
+    letter-spacing: 0.04em;
+    color: var(--main-color-white);
+    
+}
+
+.description-container{
+    grid-column: 2/3;
+    align-self: flex-start;
+}
+
+.description-container > p{
+    font-size:3.2rem;
+    font-weight: 500;
+    color: var(--main-color-white);
+   
+}
+
+.description-container > .underline{
+    width: 100%;
+    height: 3px;
+    background-image: url(./assets/underline.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero > a{
+    padding: 0.6em 1.1em;
+    grid-column: 2/3;
+    align-self: flex-start;
+    font-size: clamp(2rem,3vw,2.8rem);
+    font-weight: 600;
+    color: var(--main-color-blue);
+    border-radius: 40px;
+    background-image: url(./assets/border-button.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: all .3s ease;
+    
+    
+}
+
+.hero > a:hover{
+    color: var(--main-color-lh-blue);
+    transform: translateY(-10%);
+}
+
+
+@media (max-width: 621px){
+
+    nav{
+        padding: 0 1em;
+    }
+    .menu-button{
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url('./assets/menu.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        cursor: pointer;
+    }
+
+    .menu-container {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        height:100vh;
+        background: var(--main-color-white);
+    }
+
+   ul{
+        margin: 30px auto;
+        width: 88%;
+        min-width: 0;
+        height: 30%;
+        flex-direction: column;
+   }
+
+   ul li:not(:last-child){
+       width: 100%;
+       border-bottom: 1px solid var(--main-color-blue);
+       transition: all .1s linear;
+   }
+
+   ul li:not(:last-child):hover, ul li:not(:last-child):focus{
+    border-bottom: 2px solid var(--main-color-lh-blue);
+   }
+
+   ul li:last-child{
+       width: 100%;
+   }
+
+   ul li a{
+       display: block;
+       background-image: none;
+       width: 100%;
+   }
+
+   .button{
+       display:block;
+       text-align:center;
+   }
+}

@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/logo-negativo.svg" type="image/x-icon">
     <title>Marco Palmieri - Desarrollador Frontend</title>
 </head>
 <body>
     <header>
         <nav>
             <img src="./assets/logo-negativo.svg" alt="Marco Palmieri">
-                <div class="menu-container">
+                <div class="menu-container" id="menu">
 
                     <ul>
                         <li><a href="">Sobre Mí</a></li>
@@ -57,4 +58,31 @@
     <main></main>
     <footer></footer>
 </body>
+<script>
+    const menu_button = document.querySelector('.menu-button');
+    const menu = document.getElementById('menu');
+
+
+    // function toggleMenu() {
+        
+    //     //     // menu.display = 'flex'
+    //     // }
+
+    //     // menu.style.display = "none";
+    // }
+    menu_button.addEventListener('click',()=>{
+       
+        if(!menu.classList.contains("show")){
+            
+            menu.style.transform = 'translateX(0)'
+            menu.classList.add("show");
+           
+
+        }else if(menu.classList.contains("show")){
+            menu.style.transform = 'translateX(100%)'
+            menu.classList.remove("show");
+        }
+    });
+
+</script>
 </html>

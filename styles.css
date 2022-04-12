@@ -3,6 +3,10 @@
     --main-color-blue:#1B263B;
     --main-color-lh-blue:#24DAFF;
     --main-color-white:white;
+    --secondary-color-blue:#2D3E60;
+
+    --box-shadow-blue: 4px 4px 21px rgba(36, 218, 255, 0.3);
+
 }
 
 *{
@@ -24,18 +28,19 @@ header{
     width: 100%;
     height:100vh;
     overflow-x: hidden;
-    /* Ver con mas elementos */
-    /* overflow-y:clip; */ 
+   
 }
 
 nav{
-    position: relative;
+    position: fixed;
     padding: 0 2.4em;
     width: 100%;
     height: 64px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--main-color-white);
+    z-index: 20;
 }
 
 nav img{
@@ -87,13 +92,14 @@ ul li a:hover{
 
 .background-container{
     width: 100%;
-    height: calc(100% - 64px);
+    height: 100%;
     display: flex;
 }
 
 .background-left{
     width: 50%;
     background: var(--main-color-blue);
+    
 }
 
 .background-right{
@@ -195,6 +201,66 @@ ul li a:hover{
     transition: all 0.5s ease;
    }
 
+/* ABOUT ME SECTION */
+
+
+.about_general-container{
+    width: 100%;
+    background: var(--main-color-white);
+    box-shadow: var(--box-shadow-blue);
+
+}
+
+.about-article{
+    margin: 0px auto;
+    padding: 150px 0;
+    width: 60%;
+    color: var(--main-color-blue);
+}
+
+.about-article_header{
+    display: flex;
+}
+
+.about-article_header img{
+    height:160px;
+}
+
+.about-article_title{
+   margin-left: 3em;
+  
+}
+
+.about-article_title h2{
+    font-size:clamp(3.6rem, 5vw, 28rem);
+    font-weight: bold;
+    line-height: 100%;
+    text-shadow: 0px 0px 20px #00FAFF;
+}
+
+.about-article_title h3{
+    margin-top: 0.5em;
+    font-size:clamp(1.4rem, 3vw, 3rem);
+    font-weight: 400;
+    border-bottom: 3px solid #24DAFF;
+    width: fit-content;
+}
+
+.about-article-text{
+    padding-top: 3em;
+    font-weight: 300;
+    font-size: clamp(1.2rem, 3vw, 2.4rem);
+    line-height:160%;
+    text-align:justify;
+}
+
+.about-article-button{
+    display: block;
+    width: fit-content;
+    margin-top: 1.5em;
+    font-size: 2.4rem;
+    color: var(--main-color-blue);
+}
 
 @media (max-width: 681px){
 

@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav>
-            <img src="./assets/logo-negativo.svg" alt="Marco Palmieri">
+            <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
                 <div class="menu-container" id="menu">
 
                     <ul>
@@ -35,12 +35,12 @@
 
                 <section class="hero">
                     <div class="title-container">
-                        <img src="./assets/logo.svg" alt="">
+                        <img src="./assets/logo.svg" alt="Keep Growing - Marco Palmieri">
                         <h1 class="title">arco</h1>
                     </div>
 
                     <section class="hero-image">
-                        <img src="./assets/image.png" alt="">
+                        <img src="./assets/image.png" alt="Marco Palmieri">
                     </section>
 
                     <div class="title-container">
@@ -55,21 +55,39 @@
                     <a href="">Contactame</a>
                 </section>
     </header>
-    <main></main>
+    <main>
+       
+        <section class="about_general-container">
+            <article class="about-article">
+                <div class="about-article_header">
+                    <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
+                    <div class="about-article_title"> 
+                        <h2>Keep Growing</h2>
+                        <h3>Sobre Mí</h3>
+                    </div>
+                </div>
+                <p class="about-article-text">Soy un estudiante de Ingeniería de Software en la Universidad Nacional De La Matanza, y a su vez un estudiante autodidacta en la plataforma de educación online Platzi, con la cual comparto como filosofía de vida el Nunca Parar de Aprender. Gracias a dicha plataforma, he logrado aprender Desarrollo Web Frontend, con tecnologías como HTML, CSS, Javascript, y además, he aprendido sobre diseño, utilizando programas como Ilustrator o Figma, y he aprendido sobre Finanzas y sobre Criptomonedas, dos temas de los cuales soy un apasionado. 
+                </p>
+                <a href="" class="button about-article-button">Ver Currículum</a>
+            </article>
+            <section>
+                <h2></h2>
+                <section class="skills-container">
+                    <div class="skill-card">
+                        <!-- usar svg directamente si no funciona fill con img -->
+                        <img src="" alt="">
+                        <p></p>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
     <footer></footer>
 </body>
 <script>
     const menu_button = document.querySelector('.menu-button');
     const menu = document.getElementById('menu');
 
-
-    // function toggleMenu() {
-        
-    //     //     // menu.display = 'flex'
-    //     // }
-
-    //     // menu.style.display = "none";
-    // }
     menu_button.addEventListener('click',()=>{
        
         if(!menu.classList.contains("show")){

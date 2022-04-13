@@ -213,7 +213,7 @@ ul li a:hover{
 
 .about-article{
     margin: 0px auto;
-    padding: 150px 0;
+    padding: 230px 0;
     color: var(--main-color-blue);
 }
 
@@ -254,7 +254,7 @@ ul li a:hover{
 .about-article-text{
     padding-top: 3em;
     font-weight: 300;
-    font-size: clamp(1.2rem, 3vw, 2.4rem);
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
     line-height:160%;
     text-align:justify;
 }
@@ -327,12 +327,11 @@ ul li a:hover{
 
 
 .projects-background {
-    height: 100vh;
     background-image: url(./assets/fondo.svg);
 }
 
 .projects_general-container{
-    padding-top: 150px;
+    padding: 150px 0;
 }
 
 .projects-title{
@@ -359,7 +358,7 @@ ul li a:hover{
 }
 
 .projects_general-container > h3{
-    margin-top: 4em;
+    margin-top: 10rem;
     font-size:clamp(1.4rem, 3vw, 3rem);
     font-weight: 400;
     border-bottom: 3px solid #24DAFF;
@@ -370,10 +369,12 @@ ul li a:hover{
     margin: 60px 0;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    gap: 6em;
 }
 
     .project-card{
         height: 380px;
+        min-width: 290px;
         background: var(--main-color-white);
         border-radius: 30px;
         box-shadow: 0px 4px 4px rgba(27, 38, 59, 0.5);
@@ -383,13 +384,14 @@ ul li a:hover{
             width: 100%;
             height: 80%;
             object-fit: cover;
+            object-position: top;
             border-top-left-radius:30px;
             border-top-right-radius:30px;
         }
 
         .project-links{
             margin: 0px auto;
-            margin-top: 5px;
+            margin-top: 10px;
             display: flex;
             justify-content:space-between;
             width: 85%;
@@ -407,12 +409,15 @@ ul li a:hover{
                 border-radius: 15px;
             }
 
+            
+
             .project-links > a:after{
                 content: url(./assets/arrrow.png);
                 margin-left: 30px;
                 font-size: clamp(1.6rem, 3vw, 2rem);
             }
 
+        
            .github-link{
                width: 50px;
                background-image: url(./assets/github.svg);
@@ -420,6 +425,11 @@ ul li a:hover{
                background-position: center;
                cursor: pointer;
             }
+            
+                .github-link:not(.disabled) > a{
+                    display:block;
+                    height: 100%;
+                }
 
             .disabled{
                 background-image: url(./assets/github-disabled.svg);
@@ -436,6 +446,18 @@ ul li a:hover{
         grid-template-columns: repeat(3,minmax(170px, 205px));
     }
 }
+
+@media (max-width: 941px){
+
+    .projects-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .project-card{
+        height:480px;
+    }
+}
+
 
 @media (max-width: 847px){
 
@@ -574,7 +596,7 @@ ul li a:hover{
     }
     
     .skills-container{
-        grid-template-columns: repeat(2,minmax(150px, 180px));
+        grid-template-columns: repeat(2,minmax(100px, 180px));
         justify-content: space-around;
     }
 
@@ -583,6 +605,38 @@ ul li a:hover{
         width:80px;
          height:76px;
     }
+
+    .projects-container{
+        padding: 30px 0;
+        width: 102%;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x proximity;
+        gap: 1em;
+    }
+
+            .projects-container::-webkit-scrollbar {
+                background-color: #B1B5BD;
+                height: 3px;
+            }
+
+            .projects-container::-webkit-scrollbar-thumb {
+                background-color: var(--main-color-blue)
+            }
+
+    .project-card{
+        scroll-snap-align: center;
+        min-width: 400px;
+    }
+
+        .project-links{
+            margin-top: 20px;
+            height: 40px;
+        }
+            .project-links > a{
+                padding-top: 0.7em;
+            }
 
 }
 
@@ -598,5 +652,25 @@ ul li a:hover{
 
     .about-article-button{
         width: auto;
+    }
+
+    .project-card{
+        min-width: 280px;
+    }
+   
+}
+
+@media (max-width: 320px){
+
+    .width{
+        width:95%
+    }
+
+    .skills-container{
+        gap: 1em;
+    }
+
+    .skill-card > svg{
+        width: 60px;
     }
 }

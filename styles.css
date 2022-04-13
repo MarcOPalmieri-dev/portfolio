@@ -236,14 +236,14 @@ ul li a:hover{
   
 }
 
-.about-article_title h2{
+.about-article_title h2, .form_general-container > h2{
     font-size:clamp(3.6rem, 5vw, 28rem);
     font-weight: bold;
     line-height: 100%;
     text-shadow: 0px 0px 20px #00FAFF;
 }
 
-.about-article_title h3{
+.about-article_title h3, .form_general-container > h3{
     margin-top: 0.5em;
     font-size:clamp(1.4rem, 3vw, 3rem);
     font-weight: 400;
@@ -346,6 +346,7 @@ ul li a:hover{
 }
 
 .projects-title > h2{
+    position: relative;
     z-index: 10;
 }
 
@@ -358,7 +359,7 @@ ul li a:hover{
 }
 
 .projects_general-container > h3{
-    margin-top: 10rem;
+    margin-top: 1rem;
     font-size:clamp(1.4rem, 3vw, 3rem);
     font-weight: 400;
     border-bottom: 3px solid #24DAFF;
@@ -435,6 +436,98 @@ ul li a:hover{
                 background-image: url(./assets/github-disabled.svg);
                 cursor: default;
             }
+
+.form_general-container{
+    width: 100%;
+    background: var(--main-color-blue);
+}
+
+/* other styles with about h2 */
+    .form_general-container > h2{
+        padding-top:160px;
+        text-align: center;
+        color: var(--main-color-white);
+    }
+
+    /* Reestructurar los codigos para que los h2 y h3 tengan los mismos estilos generales, y luego se le agreguen estilos propios segun sus clases */
+
+    .form_general-container > h3{
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        color: var(--main-color-white);
+    }
+
+    .form-container{
+        margin: 0 auto;
+        margin-top: 70px;
+        position: relative;
+        max-width: 800px;
+    }
+
+    .form-container > form{
+        position: relative;
+        top: 20px;
+        left: 20px;
+        padding: 4.5em;
+        padding-bottom: 3.5em;
+        display: flex;
+        flex-direction: column;
+        border-radius: 40px;
+        background: var(--main-color-white);
+        z-index: 10;
+        transition: all 0.3s ease;
+    }
+
+    .form-container > form:hover{
+        top: 0px;
+        left: 0px;
+    }
+
+    .form-container  input:not(.button), textarea{
+        margin-bottom: 1em;
+        padding: 0.7em 1em;
+        border: none;
+        outline: none;
+        resize: none;
+        caret-color: var(--main-color-lh-blue);
+        font-weight: 400;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        box-shadow: 0px 3px 4px rgba(27, 38, 59, 0.44);
+        color: var(--main-color-blue);
+        border-radius: 15px;
+    }
+
+    .form-container > form > div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-container > form > div >input{
+        width: 47%;
+    }
+
+    .form-border{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100%;
+        height:100%;
+        border: 5px solid var(--main-color-lh-blue);
+        border-radius: 40px;
+        z-index: 1;
+    }
+
+    input[type="submit"]{
+        padding: 0.6em 1.4em;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: fit-content;
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        background: var(--main-color-white);
+    }
+
+
 
 @media (max-width: 1024px){
 
@@ -638,6 +731,24 @@ ul li a:hover{
                 padding-top: 0.7em;
             }
 
+    .form-container > form{
+        top: 0px;
+        left: 0px;
+        padding: 4em 2em;
+    }
+
+    .form-container > form > div{
+        flex-direction: column;
+    }
+
+    .form-container > form > div > input{
+        width: 100%;
+    }
+
+    .form-border{
+        top: 0;
+        left: 0;
+    }
 }
 
 

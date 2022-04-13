@@ -219,6 +219,7 @@ ul li a:hover{
 
 /* Defines the width of the diferent sections */
 .width{
+    margin: 0 auto;
     width: 60%;
 }
 
@@ -267,11 +268,6 @@ ul li a:hover{
 }
 
 
-.skill_general-container{
-    margin: 0 auto;
-   
-}
-
 .skill_general-container > h2{
     position: relative;
     width: fit-content;
@@ -293,7 +289,6 @@ ul li a:hover{
 
 
 .skills-container{
-    margin: 0px auto;
     margin-top: 70px;
     padding-bottom: 220px;
     width: 100%;
@@ -331,10 +326,105 @@ ul li a:hover{
 }
 
 
-.projects_general-container{
+.projects-background {
     height: 100vh;
     background-image: url(./assets/fondo.svg);
 }
+
+.projects_general-container{
+    padding-top: 150px;
+}
+
+.projects-title{
+    position: relative;
+}
+
+.projects-title > h2, .projects-title > p{
+    position: absolute;
+    font-size:clamp(3.6rem, 5vw, 14rem);
+    font-weight:bold;
+    color: var(--main-color-blue);
+}
+
+.projects-title > h2{
+    z-index: 10;
+}
+
+.projects-title > p{
+    top: 5px;
+    left: 3px;
+    color: transparent;
+    -webkit-text-stroke:2px var(--main-color-lh-blue);
+    z-index: 1;
+}
+
+.projects_general-container > h3{
+    margin-top: 4em;
+    font-size:clamp(1.4rem, 3vw, 3rem);
+    font-weight: 400;
+    border-bottom: 3px solid #24DAFF;
+    width: fit-content;
+}
+
+.projects-container{
+    margin: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+    .project-card{
+        height: 380px;
+        background: var(--main-color-white);
+        border-radius: 30px;
+        box-shadow: 0px 4px 4px rgba(27, 38, 59, 0.5);
+    }
+
+        .project-card > img{
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+            border-top-left-radius:30px;
+            border-top-right-radius:30px;
+        }
+
+        .project-links{
+            margin: 0px auto;
+            margin-top: 5px;
+            display: flex;
+            justify-content:space-between;
+            width: 85%;
+        }
+
+            .project-links  > a{
+                padding: 0.5em 1em;
+                display: block;
+                width: fit-content;
+                font-weight: 400;
+                font-size: clamp(1.6rem, 3vw, 2rem);
+                letter-spacing:0.10em;
+                color: var(--main-color-white);
+                background: var(--main-color-blue);
+                border-radius: 15px;
+            }
+
+            .project-links > a:after{
+                content: url(./assets/arrrow.png);
+                margin-left: 30px;
+                font-size: clamp(1.6rem, 3vw, 2rem);
+            }
+
+           .github-link{
+               width: 50px;
+               background-image: url(./assets/github.svg);
+               background-repeat: no-repeat;
+               background-position: center;
+               cursor: pointer;
+            }
+
+            .disabled{
+                background-image: url(./assets/github-disabled.svg);
+                cursor: default;
+            }
 
 @media (max-width: 1024px){
 

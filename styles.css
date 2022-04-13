@@ -214,8 +214,12 @@ ul li a:hover{
 .about-article{
     margin: 0px auto;
     padding: 150px 0;
-    width: 60%;
     color: var(--main-color-blue);
+}
+
+/* Defines the width of the diferent sections */
+.width{
+    width: 60%;
 }
 
 .about-article_header{
@@ -258,13 +262,112 @@ ul li a:hover{
     display: block;
     width: fit-content;
     margin-top: 1.5em;
-    font-size: 2.4rem;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
     color: var(--main-color-blue);
 }
 
+
+.skill_general-container{
+    margin: 0 auto;
+   
+}
+
+.skill_general-container > h2{
+    position: relative;
+    width: fit-content;
+    font-size:clamp(3.6rem, 5vw, 8rem);
+    font-weight: 500;
+    color: var(--main-color-blue);
+    /* border-bottom: 3px solid #24DAFF; */
+}
+
+.skill_general-container > h2:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 65%;
+    height: 3px;
+    background-color: var(--main-color-lh-blue);
+}
+
+
+.skills-container{
+    margin: 0px auto;
+    margin-top: 70px;
+    padding-bottom: 220px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(170px, 205px));
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.skill-card{
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 7px rgba(36, 218, 255, 0.25);
+    transition: all 300ms ease-out;
+}
+
+
+.skill-card:hover{
+    transform: translateY(-10px);
+}
+
+.skill-card:hover > svg path{
+    fill: var(--main-color-lh-blue);
+}
+
+.skill-card > p{
+    margin-top: .6em;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+    text-align: center;
+    color: var(--main-color-blue);
+}
+
+
+.projects_general-container{
+    height: 100vh;
+    background-image: url(./assets/fondo.svg);
+}
+
+@media (max-width: 1024px){
+
+    .width{
+        width: 70%;
+    }
+
+    .skills-container{
+        grid-template-columns: repeat(3,minmax(170px, 205px));
+    }
+}
+
+@media (max-width: 847px){
+
+    .hero-image {
+        background-image: url('./assets/circle-pequeño.png');
+        padding: 20px;
+    }
+
+    .hero-image > img{
+        height: 72%;
+     }
+
+     .width{
+        width: 80%;
+    }
+     .about-article_header img{
+        height:120px;
+    }
+}
+
+
 @media (max-width: 681px){
-
-
     nav{
         padding: 0 1em;
     }
@@ -379,16 +482,31 @@ ul li a:hover{
     .description-container > .underline{
         background-image: url('./assets/underline-mobile.svg')
     }
-}
-
-@media (max-width: 847px){
-
-    .hero-image {
-        background-image: url('./assets/circle-pequeño.png');
-        padding: 20px;
+    
+    .skills-container{
+        grid-template-columns: repeat(2,minmax(150px, 180px));
+        justify-content: space-around;
     }
 
-    .hero-image > img{
-        height: 72%;
-     }
+
+    .skill-card > svg{
+        width:80px;
+         height:76px;
+    }
+
+}
+
+
+@media (max-width: 425px){
+    .width{
+        width: 90%;
+    }
+
+    .about-article_header img{
+        height:80px;
+    }
+
+    .about-article-button{
+        width: auto;
+    }
 }

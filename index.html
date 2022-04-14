@@ -4,6 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Marco Palmieri - Desarrollador Frontend">
+    <meta name="description" content="Hola, Mi nombre es Marco y soy Desarrollador Frontend Y Diseñador Web. Estudiante de Ingeniería Informática ¡Contactame!" />
+
+    <meta property="og:image" content="./assets/logo.svg">
+    <meta name="og:description" content="Hola, Mi nombre es Marco Palmieri y soy Desarrollador Frontend Y Diseñador Web. Estudiante de Ingeniería Informática ¡Contactame!">
+    <meta property="og:title" content="Marco Palmieri - Desarrollador Frontend">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:title" content="Marco Palmieri - Desarrollador Frontend">
+    <meta name="twitter:description" content="Hola, Mi nombre es Marco Palmieri y soy Desarrollador Frontend Y Diseñador Web. Estudiante de Ingeniería Informática ¡Contactame!">
+    <meta name="twitter:image" content="assets\fondo-max.webp">
+
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/logo.png">
+
+    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Marco Palmieri - Desarrollador Frontend" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="./assets/logo.svg" />
+    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://marcopalmieri.netlify.app/" />
+
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index,follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -14,14 +37,17 @@
 <body>
     <header>
         <nav>
-            <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
+            <div class="logo-container">
+                <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
+                <a href=""></a>
+            </div>
                 <div class="menu-container" id="menu">
 
                     <ul>
-                        <li><a href="">Sobre Mí</a></li>
-                        <li><a href="">Proyectos</a></li>
-                        <li><a href="">Contactame</a></li>
-                        <li><a href="" class="button">Ver Currículum</a></li>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#contact">Contactame</a></li>
+                        <li><a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button">Ver Currículum</a></li>
                     </ul>
                 </div>
             
@@ -52,12 +78,12 @@
                         <div class="underline"></div>
                     </section>
 
-                    <a href="">Contactame</a>
+                    <a href="https://marcopalmieri.netlify.app/#contact">Contactame</a>
                 </section>
     </header>
     <main>
        
-        <section class="about_general-container">
+        <section class="about_general-container" id="about">
             <article class="about-article width">
                 <div class="about-article_header">
                     <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
@@ -66,9 +92,13 @@
                         <h3>Sobre Mí</h3>
                     </div>
                 </div>
-                <p class="about-article-text">Soy un estudiante de Ingeniería de Software en la Universidad Nacional De La Matanza, y a su vez un estudiante autodidacta en la plataforma de educación online Platzi, con la cual comparto como filosofía de vida el Nunca Parar de Aprender. Gracias a dicha plataforma, he logrado aprender Desarrollo Web Frontend, con tecnologías como HTML, CSS, Javascript, y además, he aprendido sobre diseño, utilizando programas como Ilustrator o Figma, y he aprendido sobre Finanzas y sobre Criptomonedas, dos temas de los cuales soy un apasionado. 
+                <p class="about-article-text">Hola, Mi nombre es Marco y soy un <em>Desarrollador Web Frontend</em> nacido en Buenos Aires, Argentina. Me encuentro cursando el primer año de Ingeniería Informática en la Universidad Nacional De La Matanza, mientras que estudio por mi cuenta en la plataforma de educación online Platzi, con la cual comparto como filosofía de vida el <em>“Nunca Parar de Aprender”.</em> <br>
+                    Mi historia como desarrollador comenzó en cuarto año de secundaria, donde comencé a sentir curiosidad sobre cómo funcionaban los dispositivos tecnólogicos que me rodeaban. Así que comencé a investigar, a mirar videos en Youtube, hasta que descubrí la programación, y desde ese entonces, supe que quería formar parte de este fasciante mundo. Por lo que comencé a ver cursos en Platzi. Gracias a esto, he logrado convertirme en Desarrollo Web,  aprendiendo lenguajes como <em>HTML, CSS y Javascript.</em> Además, me encanta dibujar y diseñar, por lo que aplico esto a mis proyectos, gracias a tecnologías como <em>Figma</em> o <em>Ilustrator.</em> 
+                    Mientras iba aprendiendo, comencé a aplicar mis conocimientos creando diversos proyectos independientes como mi propio calendario con una lista de tareas con barras de progresos, llamado Marclendario (lo sé, los nombres no son mi fuerte), una página web para un pequeño negocio, hasta que finalmente, he desarrollado el diseño y el sitio web del Instituto Parroquial San Justo, un importante colegio de mi cuidad, el cual fue mi primer contacto con un <em>proyecto freelance profesional.</em><br>   
+                    En estos momentos me encuentro aprendiendo <em>React</em> y todo lo relacionado a esta librería, para así seguir creciendo como profesional. A su vez, en mis tiempos libres me gusta aprender sobre economía e inversiones, sobretodo lo relacionado al mundo de las criptomonedas, tecnología que me encanta y la cual quiero aprender para así poder aportar mi conocimiento al desarrollo de este ecosistrma y de la Web3.<br>
+                    Estoy ansioso por poder aplicar mis ganas y conocimientos en un equipo de trabajo en el que pueda crear productos y servicios que cambien el mundo así que, si estás interesado, <em>¡No dudes en contactarme!</em> 
                 </p>
-                <a href="" class="button about-article-button">Ver Currículum</a>
+                <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button about-article-button">Ver Currículum</a>
             </article>
 
             <section class="skill_general-container width">
@@ -147,7 +177,7 @@
 
         <div class="projects-background">
 
-            <section class="projects_general-container width">
+            <section class="projects_general-container width" id="projects">
                 <div class="projects-title">
                     <h2>Practice Makes Perfect</h2>
                     <p>Practice Makes Perfect</p>
@@ -156,7 +186,7 @@
     
                     <article class="projects-container">
                         <section class="project-card">
-                            <img src="./assets/projects/parroquial.png" alt="Parroquial San Justo" title="Parroquial San Justo: Trabajo">
+                            <img src="./assets/projects/parroquial.webp" alt="Parroquial San Justo" title="Parroquial San Justo: Trabajo">
                             <div class="project-links">
                                 <a href="https://parroquialsanjusto.com/" target="_blank" rel="noopener noreferrer">Ver</a>
                               
@@ -167,7 +197,7 @@
                         </section>
 
                         <section class="project-card">
-                            <img src="./assets/projects/blconsultores.png" alt="BlConsultores" title="BlConsultores">
+                            <img src="./assets/projects/blconsultores.webp" alt="BlConsultores" title="BlConsultores">
                             <div class="project-links">
                                 <a href="http://www.blconsultores.com/prueba/index.html" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -182,18 +212,7 @@
     
                     <article class="projects-container">
                         <section class="project-card">
-                            <img src="./assets/projects/tecnohelp.png" alt="TecnoHelp" title="TecnoHelp">
-                            <div class="project-links">
-                                <a href="https://tecnohelp.netlify.app/" target="_blank" rel="noopener noreferrer">Ver</a>
-                                
-                                <div class="github-link">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcOPalmieri-dev/Tecno-Help"></a>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="project-card">
-                            <img src="./assets/projects/marclendario.png" alt="Marclendario" title="Marclendario">
+                            <img src="./assets/projects/marclendario.webp" alt="Marclendario" title="Marclendario">
                             <div class="project-links">
                                 <a href="https://marclendario.netlify.app/" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -204,7 +223,19 @@
                         </section>
 
                         <section class="project-card">
-                            <img src="./assets/projects/batabit.png" alt="Batabit" title="Batabit">
+                            <img src="./assets/projects/tecnohelp.webp" alt="TecnoHelp" title="TecnoHelp">
+                            <div class="project-links">
+                                <a href="https://tecnohelp.netlify.app/" target="_blank" rel="noopener noreferrer">Ver</a>
+                                
+                                <div class="github-link">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/MarcOPalmieri-dev/Tecno-Help"></a>
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <section class="project-card">
+                            <img src="./assets/projects/batabit.webp" alt="Batabit" title="Batabit">
                             <div class="project-links">
                                 <a href="https://marcopalmieri-dev.github.io/batabit/" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -217,7 +248,7 @@
             </section>
         </div>
 
-        <section class="form_general-container">
+        <section class="form_general-container" id="contact">
             <h2>¡Hablemos!</h2>
             <h3>Contacto</h3>
 
@@ -267,7 +298,7 @@
                 <p>Copyright ©2022 marcopalmieri <br>
                     All rights reserved.</p>
             </div>
-            <a href="" class="button-negative">Ver Currículum</a>
+            <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button-negative">Ver Currículum</a>
         </section>
     </footer>
 </body>

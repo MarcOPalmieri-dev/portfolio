@@ -15,7 +15,7 @@
 
     <meta name="twitter:title" content="Marco Palmieri - Desarrollador Frontend">
     <meta name="twitter:description" content="Hola, Mi nombre es Marco Palmieri y soy Desarrollador Frontend Y Diseñador Web. Estudiante de Ingeniería Informática ¡Contactame!">
-    <meta name="twitter:image" content="assets\fondo-max.webp">
+    <meta name="twitter:image" content="./assets/logo.png">
 
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="./assets/logo.png">
@@ -29,6 +29,8 @@
     <meta name="googlebot" content="index,follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" media="(min-width: 769px)" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./assets/logo-negativo.svg" type="image/x-icon">
@@ -36,12 +38,12 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo-container">
+        <nav data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2400">
+            <div class="logo-container" data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2700">
                 <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
                 <a href=""></a>
             </div>
-                <div class="menu-container" id="menu">
+                <div class="menu-container" id="menu" data-aos="fade-down" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2900">
 
                     <ul>
                         <li><a href="#about">Sobre Mí</a></li>
@@ -60,25 +62,25 @@
             </section>
 
                 <section class="hero">
-                    <div class="title-container">
+                    <div class="title-container" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2500">
                         <img src="./assets/logo.svg" alt="Keep Growing - Marco Palmieri">
                         <h1 class="title">arco</h1>
                     </div>
 
-                    <section class="hero-image">
-                        <img src="./assets/image.png" alt="Marco Palmieri">
+                    <section class="hero-image" >
+                        <img src="./assets/image.png" alt="Marco Palmieri" data-aos="fade" data-aos-easing="ease-in" data-aos-duration="500" data-aos-delay="2000">
                     </section>
 
-                    <div class="title-container">
+                    <div class="title-container" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2500">
                         <h1 class="title">Palmieri</h1>
                     </div>
 
-                    <section class="description-container">
+                    <section class="description-container" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="2700">
                         <p>Front-end Developer</p>
                         <div class="underline"></div>
                     </section>
 
-                    <a href="#contact">Contactame</a>
+                    <a href="#contact" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="500" data-aos-delay="3000">Contactame</a>
                 </section>
     </header>
     <main>
@@ -86,10 +88,10 @@
         <section class="about_general-container" id="about">
             <article class="about-article width">
                 <div class="about-article_header">
-                    <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri">
+                    <img src="./assets/logo-negativo.svg" alt="Keep Growing - Marco Palmieri" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="500" >
                     <div class="about-article_title"> 
-                        <h2>Keep Growing</h2>
-                        <h3>Sobre Mí</h3>
+                        <h2 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="300">Keep Growing</h2>
+                        <h3 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="500">Sobre Mí</h3>
                     </div>
                 </div>
                 <p class="about-article-text">Hola, Mi nombre es Marco y soy un <em>Desarrollador Web Frontend</em> nacido en Buenos Aires, Argentina. Me encuentro cursando el primer año de Ingeniería Informática en la Universidad Nacional De La Matanza, mientras que estudio por mi cuenta en la plataforma de educación online Platzi, con la cual comparto como filosofía de vida el <em>“Nunca Parar de Aprender”.</em> <br>
@@ -98,12 +100,12 @@
                     En estos momentos me encuentro aprendiendo <em>React</em> y todo lo relacionado a esta librería, para así seguir creciendo como profesional. A su vez, en mis tiempos libres me gusta aprender sobre economía e inversiones, sobretodo lo relacionado al mundo de las criptomonedas, tecnología que me encanta y la cual quiero aprender para así poder aportar mi conocimiento al desarrollo de este ecosistrma y de la Web3.<br>
                     Estoy ansioso por poder aplicar mis ganas y conocimientos en un equipo de trabajo en el que pueda crear productos y servicios que cambien el mundo así que, si estás interesado, <em>¡No dudes en contactarme!</em> 
                 </p>
-                <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button about-article-button">Ver Currículum</a>
+                <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button about-article-button" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="500">Ver Currículum</a>
             </article>
 
             <section class="skill_general-container width">
-                <h2>Skills</h2>
-                <section class="skills-container">
+                <h2 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="300">Skills</h2>
+                <section class="skills-container" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" data-aos-delay="500">
                     <div class="skill-card" title="HTML">
                         
                         <svg width="104" height="101" viewBox="0 0 104 101" xmlns="http://www.w3.org/2000/svg">
@@ -178,15 +180,15 @@
         <div class="projects-background">
 
             <section class="projects_general-container width" id="projects">
-                <div class="projects-title">
+                <div class="projects-title" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="300">
                     <h2>Practice Makes Perfect</h2>
                     <p>Practice Makes Perfect</p>
                 </div>
-                <h3>Trabajos</h3>
+                <h3 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="400">Trabajos</h3>
     
-                    <article class="projects-container">
-                        <section class="project-card">
-                            <img src="./assets/projects/parroquial.webp" alt="Parroquial San Justo" title="Parroquial San Justo: Trabajo">
+                    <article class="projects-container" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="600">
+                        <section class="project-card" >
+                            <img src="./assets/projects/parroquial.jpg" alt="Parroquial San Justo" title="Parroquial San Justo: Trabajo">
                             <div class="project-links">
                                 <a href="https://parroquialsanjusto.com/" target="_blank" rel="noopener noreferrer">Ver</a>
                               
@@ -196,8 +198,8 @@
                             </div>
                         </section>
 
-                        <section class="project-card">
-                            <img src="./assets/projects/blconsultores.webp" alt="BlConsultores" title="BlConsultores">
+                        <section class="project-card" >
+                            <img src="./assets/projects/blconsultores.jpg" alt="BlConsultores" title="BlConsultores">
                             <div class="project-links">
                                 <a href="http://www.blconsultores.com/prueba/index.html" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -208,11 +210,11 @@
                         </section>
                     </article>
     
-                <h3>Proyectos</h3>
+                <h3 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="400">Proyectos</h3>
     
-                    <article class="projects-container">
-                        <section class="project-card">
-                            <img src="./assets/projects/marclendario.webp" alt="Marclendario" title="Marclendario">
+                    <article class="projects-container" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="600">
+                        <section class="project-card" >
+                            <img src="./assets/projects/marclendario.jpg" alt="Marclendario" title="Marclendario">
                             <div class="project-links">
                                 <a href="https://marclendario.netlify.app/" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -223,7 +225,7 @@
                         </section>
 
                         <section class="project-card">
-                            <img src="./assets/projects/tecnohelp.webp" alt="TecnoHelp" title="TecnoHelp">
+                            <img src="./assets/projects/tecnohelp.jpg" alt="TecnoHelp" title="TecnoHelp">
                             <div class="project-links">
                                 <a href="https://tecnohelp.netlify.app/" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -235,7 +237,7 @@
 
 
                         <section class="project-card">
-                            <img src="./assets/projects/batabit.webp" alt="Batabit" title="Batabit">
+                            <img src="./assets/projects/batabit.jpg" alt="Batabit" title="Batabit">
                             <div class="project-links">
                                 <a href="https://marcopalmieri-dev.github.io/batabit/" target="_blank" rel="noopener noreferrer">Ver</a>
                                 
@@ -249,8 +251,8 @@
         </div>
 
         <section class="form_general-container" id="contact">
-            <h2>¡Hablemos!</h2>
-            <h3>Contacto</h3>
+            <h2 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="100">¡Hablemos!</h2>
+            <h3 data-aos="fade-right" data-aos-easing="ease" data-aos-duration="500" data-aos-delay="300">Contacto</h3>
 
             <section class="form-container width">
                 <form id="form">
@@ -288,18 +290,21 @@
         </section>
     </main>
     <footer>
+        <!-- Span to display the after and before elements, to avoid clicking the link of "Ver curriculum" button -->
+        <span class="footer-lines"></span>
         <section class="footer-container width">
             <div>
                 <svg width="99" height="110" viewBox="0 0 99 110" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M57.1667 65.9248L45.375 73.83L38.5621 60.6365L13.3732 110L0 103.076L39.0191 26.5989L47.185 43.7237L57.1667 65.9248Z" fill="#5BC4EA"/>
                     <path d="M99.0001 39.326L87.064 47.328L80.3895 34.0377L52.9997 87.7201L44.2747 71.6917L80.8525 0L89.0183 17.1188L99.0001 39.326Z" fill="white"/>
-                    </svg>
-                    
+                </svg>
+                
                 <p>Copyright ©2022 marcopalmieri <br>
                     All rights reserved.</p>
-            </div>
-            <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button-negative">Ver Currículum</a>
-        </section>
+                </div>
+                <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button-negative">Ver Currículum</a>
+            </section>
+            
     </footer>
 
      
@@ -317,8 +322,11 @@
         </div>
     </dialog>
 </body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
+    AOS.init();
+
     const menu_button = document.querySelector('.menu-button');
     const menu = document.getElementById('menu');
 

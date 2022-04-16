@@ -142,6 +142,14 @@ ul li a:hover{
     background-position: center;
 }
 
+@keyframes rotate {
+    0%{
+        transform:rotate(180deg);
+    }
+    100%{
+        transform:rotate(0deg); 
+    }
+}
 .title-container{
     display: flex;
     width: 85%;
@@ -656,8 +664,13 @@ footer{
     color: var(--main-color-white);
 }
 
+.footer-lines{
 
-.footer-container :after{
+    display: block;
+    position: relative;
+}
+
+.footer-lines:after{
     position: absolute;
     top: 40px;
     content: "";
@@ -667,7 +680,7 @@ footer{
     background-color: #2D3E60;
 }
 
-.footer-container :before{
+.footer-lines:before{
     position: absolute;
     content: "";
     top: 80px;
@@ -735,6 +748,12 @@ dialog .modal{
     }
 
 
+@media (min-width: 769px){
+    .hero-image{
+
+        animation: rotate 2s ease-out;
+    }
+}
 @media (max-width: 1024px){
 
     .width{
@@ -763,6 +782,7 @@ dialog .modal{
     .hero-image {
         background-image: url('./assets/circle-pequeño.png');
         padding: 20px;
+        
     }
 
     .hero-image > img{

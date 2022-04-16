@@ -78,11 +78,11 @@
                         <div class="underline"></div>
                     </section>
 
-                    <a href="https://marcopalmieri.netlify.app/#contact">Contactame</a>
+                    <a href="#contact">Contactame</a>
                 </section>
     </header>
     <main>
-       
+
         <section class="about_general-container" id="about">
             <article class="about-article width">
                 <div class="about-article_header">
@@ -253,13 +253,13 @@
             <h3>Contacto</h3>
 
             <section class="form-container width">
-                <form action="">
+                <form id="form">
                     <div>
-                        <input type="text" placeholder="Nombre" autocomplete="name" required>
-                        <input type="email" placeholder="Email" autocomplete="email" required>
+                        <input type="text" placeholder="Nombre" name="form_name" autocomplete="name" required class="inputs">
+                        <input type="email" placeholder="Email" name="form_email" autocomplete="email" required class="inputs">
                     </div>
-                    <input type="text" placeholder="Asunto" required>
-                    <textarea placeholder="Escribe aquí tu mensaje" rows="6" required></textarea>
+                    <input type="text" placeholder="Asunto" name="subject" required class="inputs">
+                    <textarea placeholder="Escribe aquí tu mensaje" name="message" rows="6" required class="inputs"></textarea>
 
                     <input type="submit" id="button" value="Enviar" class="button">
                 </form>
@@ -301,7 +301,23 @@
             <a href="./assets/marcopalmieri cv.pdf" target="_blank" rel="noopener noreferrer" class="button-negative">Ver Currículum</a>
         </section>
     </footer>
+
+     
+    <dialog id="dialog">
+        <div  class="modal sent_modal hide">
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Recibirás una respuesta lo antes posible.</p>
+            <button class="dialog-button">Aceptar</button>
+        </div>
+
+        <div class="modal error_modal hide">
+            <h3>Ha ocurrido un error...</h3>
+            <p>Intentalo de nuevo más tarde, o contactame por mi Mail o LinkedIn</p>
+            <button class="dialog-button">Aceptar</button>
+        </div>
+    </dialog>
 </body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     const menu_button = document.querySelector('.menu-button');
     const menu = document.getElementById('menu');
@@ -319,6 +335,54 @@
             menu.classList.remove("show");
         }
     });
+
+
+
+    emailjs.init('user_NDTpGQZNkCkZ0WMxj4kKM')
+      
+      const btn = document.getElementById('button');
+      const inputs = document.querySelectorAll('.inputs');
+
+      const dialog = document.querySelector('#dialog');
+      const dialog_button = document.querySelector('.dialog-button');
+  
+      document.getElementById('form')
+      .addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      btn.value="Enviando...";
+
+      const serviceID = 'service_aqtcbdr';
+      const templateID = 'form_contacto';
+  
+      emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+
+              btn.value="Enviar";
+        
+              document.querySelector('.sent_modal').classList.remove('hide');
+
+
+          inputs.forEach(input=>{
+              input.value="";
+          })
+          }, (err) => {
+
+          
+              document.querySelector('.error_modal').classList.remove('hide');
+  
+          alert('Ha ocurrido un error. Por favor, intentalo más tarde, o intenta enviar tu mensaje directamente a la respectiva dirección de mail que aparece en la lista anterior.');
+    
+          });
+      });
+
+      dialog.addEventListener('click', (e)=>{
+          if(e.target.nodeName === 'BUTTON'){
+            e.path[1].classList.add('hide')
+          }
+        
+      })
+  
 
 </script>
 </html>
